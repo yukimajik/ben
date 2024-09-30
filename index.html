@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benjamin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+<div class="viewport">
+  <div class="container">
+
+      <div class="section cliff">
+        <div class="img-view"></div>
+        <h2 class="name">Benjamin Li</h2>
+      </div>
+
+      <div class="section bio">
+        <div class="left">
+          <div class="text">Hey, I'm Ben. I enjoy cooking, gardening, and meditating. I have skills in web design, badminton, and building computers. Fun fact: I currently rank in the top 500 of 27 Million League of Legends players in North America using a computer I built myself.</div>
+        </div>
+        <div class="right">
+          <div class="img-view">
+            <img src="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section cooking">
+        <div class="left">
+          <div class="img-area">
+            <div class="img-view"></div>
+          </div>
+          <div class="content">
+            <h2 class="title">Cooking</h2>
+            <div class="text">Rate the dishes below.<br>Results are stored in Firebase!</div>
+            <div class="vote-area">
+              <div class="meal">
+                <div class="img-area-meal">
+                  <div class="img-view one"></div>
+                </div>
+                <div class="vote-row">
+                  <div class="vote-area">
+                    <div class="up-area">
+                      <img class="up" src="icons/up.svg"/>
+                      <div class="select" id="u1"></div>
+                    </div>
+                    <div class="result">
+                      <div class="value" id="r1"></div>
+                    </div>
+                    <div class="down-area">
+                      <img class="down" src="icons/down.svg"/>
+                      <div class="select" id="d1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="meal">
+                <div class="img-area-meal">
+                  <div class="img-view two"></div>
+                </div>
+                <div class="vote-row">
+                  <div class="vote-area">
+                    <div class="up-area">
+                      <img class="up" src="icons/up.svg"/>
+                      <div class="select" id="u2"></div>
+                    </div>
+                    <div class="result">
+                      <div class="value" id="r2"></div>
+                    </div>
+                    <div class="down-area">
+                      <img class="down" src="icons/down.svg"/>
+                      <div class="select" id="d2"></div>
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+              <div class="meal">
+                <div class="img-area-meal">
+                  <div class="img-view three"></div>
+                </div>
+                <div class="vote-row">
+                  <div class="vote-area">
+                    <div class="up-area">
+                      <img class="up" src="icons/up.svg"/>
+                      <div class="select" id="u3"></div>
+                    </div>
+                    <div class="result">
+                      <div class="value" id="r3"></div>
+                    </div>
+                    <div class="down-area">
+                      <img class="down" src="icons/down.svg"/>
+                      <div class="select" id="d3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="img-view"></div>
+        </div>
+      </div>
+
+      <div class="section badminton">
+        <div class="images">
+          <div class="img-view left"></div>
+          <div class="img-view middle"></div>
+          <div class="img-view right"></div>
+        </div>
+        <div class="title-area">
+          <h2 class="title">Badminton</h2>
+          <div class="text">Played from nine years old </div>
+        </div>
+      </div>
+
+      <div class="section league">
+        <h2 class="title">League of Legends</h2>
+        <div class="img-view user"></div>
+        <div class="computer">
+          <div class="left">
+            <div class="img-view"></div>
+          </div>
+          <div class="right">
+            <div class="text-area">
+              <div class="text">I built a custom PC to compete in League of Legends.</div>
+            </div>
+            <div class="img-view"></div>
+          </div>
+        </div>
+        <div class="img-area">
+          <div class="img-view"></div>
+        </div>
+      </div>
+
+      <div class="section footer">
+        <div class="img-view"></div>
+        <h2 class="name">Benjamin Li</h2>
+      </div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+<script src="firebase_helper.js"></script>
+<script src="helper.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

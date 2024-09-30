@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --row-gap: 60px;
+    --viewport-grad-start: #2D6BA5;
+    --viewport-grad-end: #333333;
+    --border: 3px solid white;
+    --bio-background: #728395;
+    --badminton-yellow: #FAEC84;
+    --badminton-purple: #8054B6;
+    --badminton-base-width: 264px;
+}
+  
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background: var(--viewport-grad-end);
+}
+
+body {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(800px, 1200px) 1fr;
+
+}
+
+h2 {
+    padding: 0px;
+    margin: 0px;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.viewport {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    background: linear-gradient(var(--viewport-grad-start), var(--viewport-grad-end));
+
+    .container {
+        
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        padding: var(--row-gap) 0px;
+        row-gap: var(--row-gap);
+
+        .section.cliff {
+            position: relative;
+            .img-view {
+                border: var(--border);
+                background: url(img/cliff.jpg);
+                width: 800px;
+                height: 766px;
+            }
+            .name {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                color: white;
+            }
+        }
+
+        .section.bio {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border: var(--border);
+
+            .left {
+                border-right: var(--border);
+                padding: 20px;
+                background: var(--bio-background);
+                .text {
+                    color: white;
+                }
+            }
+            .right {
+                .img-view {
+                    background: url(img/splash.jpg);
+                    width: 355px;
+                    height: 500px;
+                }
+            }
+        }
+
+        .section.cooking {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border: var(--border);
+
+            .left {
+                position: relative;
+                overflow: hidden;
+                .img-area {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    .img-view {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        background: url(img/pizza.jpg);
+                        width: 598px;
+                        height: 500px;
+                        filter: blur(2px) brightness(70%);
+                    }
+                }
+                .content {
+                    position: absolute;
+                    display: grid;
+                    grid-template-rows: auto auto 1fr;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    padding: 20px;
+                    row-gap: 20px;
+                    .title {
+                        color: white;    
+                    }
+                    .text {
+                        color: white;
+                    }
+                    .vote-area {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        .meal {
+                            display: grid;
+                            grid-template-rows: auto 1fr;
+                            row-gap: 20px;
+                            .img-area-meal {
+                                display: flex;
+                                justify-content: center;
+                                .img-view {
+                                    width: 140px;
+                                    height: 140px;
+                                    border-radius: 50%;
+                                    border: var(--border);
+
+                                    &.one {
+                                        background: url(img/cp.png);
+                                    }
+
+                                    &.two {
+                                        background: url(img/cb.png);
+                                    }
+
+                                    &.three {
+                                        background: url(img/cs.png);
+                                    }
+                                }
+                            }
+                            .vote-row {
+                                display: flex;
+                                justify-content: center;
+
+                                .vote-area {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    height: 46px;
+                                    width: 146px;
+
+                                    .up-area, .down-area {
+                                        position: relative;
+                                        width: 46px;
+                                        height: 46px;
+                                        .up, .down {
+                                            position: relative;
+                                            z-index: 1;
+                                            pointer-events: none;
+                                        }
+                                        .select {
+                                            position: absolute;
+                                            z-index: 0;
+                                            top: 0px;
+                                            right: 0px;
+                                            bottom: 0px;
+                                            left: 0px;
+                                            width: 46px;
+                                            height: 46px;
+                                            border-radius: 50%;
+                                            cursor: pointer;
+                                            transition: background 0.2s;
+
+                                            &.active {
+                                                background: white;
+                                                opacity: 0.5;                                         
+                                            }
+
+                                            &:hover {
+                                                background: white;
+                                                opacity: 0.5;
+                                            }
+                                        }
+                                    }
+
+                                    .result {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                .img-view {
+                    background: url(img/ribs.jpg);
+                    width: 196px;
+                    height: 500px;
+                }
+            }
+        }
+
+        .section.badminton {
+            position: relative;
+            height: 500px;
+            border: var(--border);
+            .images {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+
+                .img-view {
+                    width: var(--badminton-base-width);
+                    height: 500px;
+                    
+                    &.left {
+                        background: url(img/b1.jpg);
+                        position: absolute;
+                        left: 0px;
+                        cursor: pointer;
+                        transition: width 0.2s;
+
+                        &:hover {
+                            z-index: 1;
+                            width: calc(2 * var(--badminton-base-width) - 80px);
+                        }
+                    }
+                    &.middle {
+                        background: url(img/b2.jpg);
+                        background-position: -50px 0px;
+                        position: absolute;
+                        left: var(--badminton-base-width);
+                        cursor: pointer;
+                        transition: width 0.2s, background-position 0.2s, left 0.2s;
+
+                        &:hover {
+                            z-index: 1;
+                            left: calc(var(--badminton-base-width) - 80px);
+                            width: calc(2 * var(--badminton-base-width) - 80px);
+                            background-position: 0px 0px;
+                        }
+                    }
+                    &.right {
+                        background: url(img/b3.jpg);
+                        background-position: -1100px -20px;
+                        position: absolute;
+                        left: calc(2 * var(--badminton-base-width) + 2px);
+                        cursor: pointer;
+                        transition: width 0.2s, background-position 0.2s, left 0.2s;
+
+                        &:hover {
+                            z-index: 1;
+                            left: calc(var(--badminton-base-width) + 80px + 2px);
+                            width: calc(2 * var(--badminton-base-width) - 80px);
+                            background-position: -900px -20px;
+                        }
+                    }
+                }
+            }
+
+            .title-area {
+                position: absolute;
+                z-index: 2;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                padding: 20px;
+                color: var(--badminton-purple);
+                display: grid;
+                grid-template-rows: repeat(2, 70px);
+                row-gap: 20px;
+
+                .title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--badminton-yellow);
+                }
+                .text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--badminton-yellow);
+                }
+            }
+        }
+                
+        .section.league {
+            background: linear-gradient(#000E15, #263240);
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            border: var(--border);
+            row-gap: 20px;
+
+            .title {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                height: 150px;
+                color: white;
+            }
+            .img-view.user {
+                background: url(img/user.jpg);
+                width: 794px;
+                height: 223px;
+            }
+            .computer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                .left {
+                    .img-view {
+                        background: url(img/comppart.jpg);
+                        width: 368px;
+                        height: calc(539px - 20px);
+                    }
+                }
+                .right {
+                    display: grid;
+                    grid-template-rows: 250px 412px;
+                    height: 539px;
+                    .text-area {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .text {
+                            text-align: center;
+                            max-width: 300px;
+                            color: white;
+                        }
+                    }
+                    .img-view {
+                        background: url(img/fan.jpg);
+                        width: 412px;
+                        height: 269px;
+                    }
+                }
+            }
+            .img-area {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img-view {
+                    background: url(img/award.jpg);
+                    width: 383px;
+                    height: 322px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .section.footer {
+            position: relative;
+            border: var(--border);
+            .img-view {
+                background: url(img/rocks.jpg);
+                width: 794px;
+                height: 256px;
+            }
+            .name {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                color: white;
+            }
+        }
+    }
+}
+        
