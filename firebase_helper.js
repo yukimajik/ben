@@ -1,12 +1,12 @@
 function firebase_helper() {
 
     const firebaseConfig = {
-        apiKey: "AIzaSyByTqUovi4bo0_1rQt7rkfm26p3iql5F_A",
-        authDomain: "ben-rch.firebaseapp.com",
-        projectId: "ben-rch",
-        storageBucket: "ben-rch.appspot.com",
-        messagingSenderId: "417232361973",
-        appId: "1:417232361973:web:e428cb626766d4e44268bc"
+        apiKey: "AIzaSyDY4EnTKHdZcBEZcHDWZX7F-Zda1su_wOw",
+        authDomain: "benwebsite-5ff19.firebaseapp.com",
+        projectId: "benwebsite-5ff19",
+        storageBucket: "benwebsite-5ff19.appspot.com",
+        messagingSenderId: "715958383337",
+        appId: "1:715958383337:web:212fb4663e9c1740d9f678"
     };
 
     const app = firebase.initializeApp(firebaseConfig);
